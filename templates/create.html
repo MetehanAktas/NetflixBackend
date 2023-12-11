@@ -1,0 +1,14 @@
+{% extends "index.html" %}
+{% load static %}
+{% block content %}
+{% include "includes/_navbar2.html" %}
+
+<div class="container mt-5">
+    <form action="" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{form}}
+        <button type="submit" class=" btn btn-danger" >Kullanıcı Kaydet</button>
+    </form>
+</div>
+  
+{% endblock content %}
